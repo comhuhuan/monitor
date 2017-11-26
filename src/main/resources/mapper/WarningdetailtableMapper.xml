@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.act.monitor.common.mapper.WarningdetailtableMapper" >
+  <resultMap id="BaseResultMap" type="com.act.monitor.common.model.Warningdetailtable" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="parentclass" property="parentclass" jdbcType="INTEGER" />
+    <id column="childclass" property="childclass" jdbcType="INTEGER" />
+    <result column="parentclassdetail" property="parentclassdetail" jdbcType="VARCHAR" />
+    <result column="childclassdetail" property="childclassdetail" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>
