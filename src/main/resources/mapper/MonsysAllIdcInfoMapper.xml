@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.act.monitor.common.mapper.MonsysAllIdcInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.act.monitor.common.model.MonsysAllIdcInfo" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="UUID" property="uuid" jdbcType="VARCHAR" />
+    <result column="idcID" property="idcid" jdbcType="VARCHAR" />
+    <result column="idcName" property="idcname" jdbcType="VARCHAR" />
+    <result column="provId" property="provid" jdbcType="INTEGER" />
+    <result column="cuDeviceNum" property="cudevicenum" jdbcType="INTEGER" />
+    <result column="cuBadDeviceNum" property="cubaddevicenum" jdbcType="INTEGER" />
+    <result column="euDeviceNum" property="eudevicenum" jdbcType="INTEGER" />
+    <result column="euBadDeviceNum" property="eubaddevicenum" jdbcType="INTEGER" />
+    <result column="recordTime" property="recordtime" jdbcType="TIMESTAMP" />
+  </resultMap>
+</mapper>

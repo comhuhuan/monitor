@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.act.monitor.common.mapper.ExceptionTableMapper" >
+  <resultMap id="BaseResultMap" type="com.act.monitor.common.model.ExceptionTable" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="type" property="type" jdbcType="VARCHAR" />
+    <id column="host" property="host" jdbcType="VARCHAR" />
+    <id column="childclass" property="childclass" jdbcType="INTEGER" />
+    <result column="instance" property="instance" jdbcType="VARCHAR" />
+    <result column="parameter" property="parameter" jdbcType="VARCHAR" />
+    <result column="warningclass" property="warningclass" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="VARCHAR" />
+    <result column="parentclass" property="parentclass" jdbcType="INTEGER" />
+    <result column="valid" property="valid" jdbcType="INTEGER" />
+    <result column="value" property="value" jdbcType="VARCHAR" />
+    <result column="max" property="max" jdbcType="VARCHAR" />
+    <result column="min" property="min" jdbcType="VARCHAR" />
+    <result column="occurtime" property="occurtime" jdbcType="VARCHAR" />
+    <result column="alarmid" property="alarmid" jdbcType="VARCHAR" />
+    <result column="appsystem" property="appsystem" jdbcType="VARCHAR" />
+    <result column="alarmtitle" property="alarmtitle" jdbcType="VARCHAR" />
+    <result column="attachments" property="attachments" jdbcType="VARCHAR" />
+  </resultMap>
+
+  <select id="getPageList" resultMap="BaseResultMap">
+
+
+  </select>
+</mapper>
