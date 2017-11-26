@@ -1,5 +1,6 @@
 package com.act.monitor.web.controller;
 
+import com.act.monitor.common.biz.ExceptionTableBiz;
 import com.act.monitor.common.mapper.ExceptionTableMapper;
 
 import com.act.monitor.web.vo.AlarmVo;
@@ -22,13 +23,13 @@ public class AlarmController  {
     private final Logger log = LoggerFactory.getLogger(AlarmController.class);
 
     @Autowired
-    ExceptionTableMapper exceptionTableMapper;
+    ExceptionTableBiz exceptionTableBiz;
 
     @ResponseBody
     @RequestMapping(value = "alarm/alarmList.do")
     public Object pagingList(AlarmVo alarmVo) {
 
-        exceptionTableMapper.getPageList( alarmVo );
+        exceptionTableBiz.getPageList( alarmVo );
 
         System.out.println("222");
         return 111;
