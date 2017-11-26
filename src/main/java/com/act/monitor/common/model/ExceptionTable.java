@@ -91,6 +91,17 @@ public class ExceptionTable {
      * 附件名
      */
     private String attachments;
+    @Transient
+    private Warningdetailtable warningdetailtable;
+
+
+    public Warningdetailtable getWarningdetailtable() {
+        return warningdetailtable;
+    }
+
+    public void setWarningdetailtable(Warningdetailtable warningdetailtable) {
+        this.warningdetailtable = warningdetailtable;
+    }
 
     /**
      * 获取设备类型EU或CU

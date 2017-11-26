@@ -18,7 +18,5 @@ import java.util.List;
 @Service
 @Transactional(rollbackFor = Exception.class)
 public class ExceptionTableBiz  extends BaseBiz<ExceptionTableMapper,ExceptionTable>{
-    public List<ExceptionTable> getPageList(AlarmVo alarmVo) {
-       return mapper.getPageList(alarmVo);
-    }
+
 }

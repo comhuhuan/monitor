@@ -37,108 +37,114 @@
 
 
         <!-- 菜单表 -->
-        <table tableName="tab_menu" >
-            <generatedKey column="menu_id" sqlStatement="Mysql"
-                          identity="true" />
-        </table>
+        <!--<table tableName="tab_menu" >-->
+            <!--<generatedKey column="menu_id" sqlStatement="Mysql"-->
+                          <!--identity="true" />-->
+        <!--</table>-->
 
-        <!--菜单权限表 -->
-        <table tableName="tab_secondary_menu" >
-            <generatedKey column="sec_menu_id" sqlStatement="Mysql"
-                          identity="true" />
-        </table>
+        <!--&lt;!&ndash;菜单权限表 &ndash;&gt;-->
+        <!--<table tableName="tab_secondary_menu" >-->
+            <!--<generatedKey column="sec_menu_id" sqlStatement="Mysql"-->
+                          <!--identity="true" />-->
+        <!--</table>-->
 
-        <!-- 系统表 -->
-        <table tableName="tab_sysmanageinfo" >
-            <generatedKey column="syamanage_id" sqlStatement="Mysql"
-                          identity="true" />
-        </table>
+        <!--&lt;!&ndash; 系统表 &ndash;&gt;-->
+        <!--<table tableName="tab_sysmanageinfo" >-->
+            <!--<generatedKey column="syamanage_id" sqlStatement="Mysql"-->
+                          <!--identity="true" />-->
+        <!--</table>-->
 
-        <!-- 用户表 user_id 不自动递增主键 -->
-        <table tableName="tab_sys_user" >
-        </table>
+        <!--&lt;!&ndash; 用户表 user_id 不自动递增主键 &ndash;&gt;-->
+        <!--<table tableName="tab_sys_user" >-->
+        <!--</table>-->
 
-        <!-- 报警权限表 scheme_id/user_type/allsid -->
-        <table tableName="t_auditpolicy_purview" >
-        </table>
+        <!--&lt;!&ndash; 报警权限表 scheme_id/user_type/allsid &ndash;&gt;-->
+        <!--<table tableName="t_auditpolicy_purview" >-->
+        <!--</table>-->
 
-        <!-- 权限属性表 -->
-        <table tableName="tab_user_role_purview" >
-            <generatedKey column="id" sqlStatement="Mysql" identity="true" />
-        </table>
+        <!--&lt;!&ndash; 权限属性表 &ndash;&gt;-->
+        <!--<table tableName="tab_user_role_purview" >-->
+            <!--<generatedKey column="id" sqlStatement="Mysql" identity="true" />-->
+        <!--</table>-->
 
-        <!--用户机房关系表 -->
-        <table tableName="tab_servicepurview" >
-            <generatedKey column="id" sqlStatement="Mysql" identity="true" />
-        </table>
+        <!--&lt;!&ndash;用户机房关系表 &ndash;&gt;-->
+        <!--<table tableName="tab_servicepurview" >-->
+            <!--<generatedKey column="id" sqlStatement="Mysql" identity="true" />-->
+        <!--</table>-->
 
-        <!-- unit_id/scheme_id -->
-        <table tableName="t_scheme" >
-        </table>
+        <!--&lt;!&ndash; unit_id/scheme_id &ndash;&gt;-->
+        <!--<table tableName="t_scheme" >-->
+        <!--</table>-->
 
-        <!-- IP受限登入表 -->
-        <table tableName="tab_ip_limit" >
-        </table>
-
-
-        <!--按钮权限表 -->
-        <table tableName="tab_purview" >
-            <generatedKey column="id" sqlStatement="Mysql" identity="true" />
-        </table>
-
-        <!-- 机房表 service_code 主键 -->
-        <table tableName="tab_service_information" >
-        </table>
-
-        <!-- 系统配置表 configid 不自动递增主键 -->
-        <table tableName="tab_sysconfig" >
-        </table>
+        <!--&lt;!&ndash; IP受限登入表 &ndash;&gt;-->
+        <!--<table tableName="tab_ip_limit" >-->
+        <!--</table>-->
 
 
-        <table tableName="eu_sys_config" >
-        </table>
-        <table tableName="web_sys_config" >
-        </table>
+        <!--&lt;!&ndash;按钮权限表 &ndash;&gt;-->
+        <!--<table tableName="tab_purview" >-->
+            <!--<generatedKey column="id" sqlStatement="Mysql" identity="true" />-->
+        <!--</table>-->
 
-        <table tableName="cu_sys_config" >
-        </table>
+        <!--&lt;!&ndash; 机房表 service_code 主键 &ndash;&gt;-->
+        <!--<table tableName="tab_service_information" >-->
+        <!--</table>-->
 
-        <table tableName="tab_menu_role" >
-        </table>
-
-
-        <table tableName="td_province" >
-        </table>
+        <!--&lt;!&ndash; 系统配置表 configid 不自动递增主键 &ndash;&gt;-->
+        <!--<table tableName="tab_sysconfig" >-->
+        <!--</table>-->
 
 
-        <table tableName="monsys_all_tabname_info">
-        </table>
+        <!--<table tableName="eu_sys_config" >-->
+        <!--</table>-->
+        <!--<table tableName="web_sys_config" >-->
+        <!--</table>-->
 
-        <table tableName="monsys_all_idc_info" >
-        </table>
+        <!--<table tableName="cu_sys_config" >-->
+        <!--</table>-->
 
-
-        <table tableName="monsys_all_housename_info" >
-        </table>
-
-        <table tableName="eu_static" >
-        </table>
-
-        <table tableName="cu_static" >
-        </table>
-
-        <table tableName="exception_table" >
-        </table>
+        <!--<table tableName="tab_menu_role" >-->
+        <!--</table>-->
 
 
-        <table tableName="tab_instructions_info">
-            <generatedKey column="instructionid" sqlStatement="Mysql"
-                          identity="true" />
-        </table>
+        <!--<table tableName="td_province" >-->
+        <!--</table>-->
 
-        <table tableName="tab_alarm_sys_config" >
-            <generatedKey column="configid" sqlStatement="Mysql"
-                          identity="true" />
+
+        <!--<table tableName="monsys_all_tabname_info">-->
+        <!--</table>-->
+
+        <!--<table tableName="monsys_all_idc_info" >-->
+        <!--</table>-->
+
+
+        <!--<table tableName="monsys_all_housename_info" >-->
+        <!--</table>-->
+
+        <!--<table tableName="eu_static" >-->
+        <!--</table>-->
+
+        <!--<table tableName="cu_static" >-->
+        <!--</table>-->
+
+        <!--<table tableName="exception_table" >-->
+        <!--</table>-->
+
+
+        <!--<table tableName="tab_instructions_info">-->
+            <!--<generatedKey column="instructionid" sqlStatement="Mysql"-->
+                          <!--identity="true" />-->
+        <!--</table>-->
+
+        <!--<table tableName="tab_alarm_sys_config" >-->
+            <!--<generatedKey column="configid" sqlStatement="Mysql"-->
+                          <!--identity="true" />-->
+        <!--</table>-->
+
+
+
+        <table tableName="warningdetailtable" >
+
         </table>
     </context>
 </generatorConfiguration>

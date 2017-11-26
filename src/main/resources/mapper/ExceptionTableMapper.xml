@@ -21,11 +21,22 @@
     <result column="alarmid" property="alarmid" jdbcType="VARCHAR" />
     <result column="appsystem" property="appsystem" jdbcType="VARCHAR" />
     <result column="alarmtitle" property="alarmtitle" jdbcType="VARCHAR" />
-    <result column="attachments" property="attachments" jdbcType="VARCHAR" />
+
   </resultMap>
+    <resultMap id="pageList" type="com.act.monitor.common.model.ExceptionTable" extends="BaseResultMap" >
+        <association property="warningdetailtable" resultMap="com.act.monitor.common.mapper.WarningdetailtableMapper.BaseResultMap">
+        </association>
+    </resultMap>
 
-  <select id="getPageList" resultMap="BaseResultMap">
-
-
+  <select id="getPageList" resultMap="pageList">
+    SELECT a.host,a.occurtime,a.parentclass ,a.status,a.type,SUM(valid) AS valid ,a.value,
+      b.parentclassdetail ,b.childclassdetail
+       FROM exception_table AS a LEFT JOIN `warningdetailtable` AS b
+       ON a.parentclass=b.parentclass and a.childclass = b.childclass
+       WHERE a.parentclass=#{parentclass}
+       <if test="valid==1">
+           and a.valid=1
+       </if>
+     GROUP BY a.childclass,a.host
   </select>
 </mapper>
