@@ -1,18 +1,99 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.act.monitor.common.mapper.MonsysAllIdcInfoMapper" >
-  <resultMap id="BaseResultMap" type="com.act.monitor.common.model.MonsysAllIdcInfo" >
-    <!--
-      WARNING - @mbg.generated
-    -->
-    <id column="UUID" property="uuid" jdbcType="VARCHAR" />
-    <result column="idcID" property="idcid" jdbcType="VARCHAR" />
-    <result column="idcName" property="idcname" jdbcType="VARCHAR" />
-    <result column="provId" property="provid" jdbcType="INTEGER" />
-    <result column="cuDeviceNum" property="cudevicenum" jdbcType="INTEGER" />
-    <result column="cuBadDeviceNum" property="cubaddevicenum" jdbcType="INTEGER" />
-    <result column="euDeviceNum" property="eudevicenum" jdbcType="INTEGER" />
-    <result column="euBadDeviceNum" property="eubaddevicenum" jdbcType="INTEGER" />
-    <result column="recordTime" property="recordtime" jdbcType="TIMESTAMP" />
-  </resultMap>
+<mapper namespace="com.act.monitor.common.mapper.MonsysAllIdcInfoMapper">
+    <resultMap id="BaseResultMap" type="com.act.monitor.common.model.MonsysAllIdcInfo">
+        <!--
+          WARNING - @mbg.generated
+        -->
+        <id column="UUID" property="uuid" jdbcType="VARCHAR"/>
+        <result column="idcID" property="idcid" jdbcType="VARCHAR"/>
+        <result column="idcName" property="idcname" jdbcType="VARCHAR"/>
+        <result column="provId" property="provid" jdbcType="INTEGER"/>
+        <result column="cuDeviceNum" property="cudevicenum" jdbcType="INTEGER"/>
+        <result column="cuBadDeviceNum" property="cubaddevicenum" jdbcType="INTEGER"/>
+        <result column="euDeviceNum" property="eudevicenum" jdbcType="INTEGER"/>
+        <result column="euBadDeviceNum" property="eubaddevicenum" jdbcType="INTEGER"/>
+        <result column="recordTime" property="recordtime" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <select id="deviceCount" resultMap="BaseResultMap">
+
+       SELECT
+        CASE
+    WHEN sum(cuDeviceNum + euDeviceNum) > 0 THEN
+        sum(
+            cuBadDeviceNum + euBadDeviceNum
+        ) / sum(cuDeviceNum + euDeviceNum)
+    ELSE
+        0
+    END AS percent,
+     sum(cuDeviceNum + euDeviceNum) AS dviceNum,
+     sum(
+        cuBadDeviceNum + euBadDeviceNum
+    ) AS badDviceNum,
+     provId
+    FROM
+        monsys_all_idc_info
+    GROUP BY
+        provId
+    HAVING
+        1 = 1
+  </select>
+
+
+    <!--首页查询全国故障设备情况sql-->
+    <select id="pageList" resultMap="">
+
+
+        SELECT
+        sum(cuDeviceNum + euDeviceNum) AS dviceNum,
+        sum(
+        cuBadDeviceNum + euBadDeviceNum
+        ) AS badDviceNum,
+        idcID,
+        idcName,
+        provId,
+        date_format(
+        recordTime,
+        '%Y-%c-%d %H:%i:%S'
+        ) AS recordTime,
+        uuid
+        FROM
+        monsys_all_idc_info
+        GROUP BY
+        uuid
+        HAVING
+        1 = 1
+
+        <if test="deviceVo.provId !==null&& deviceVo.provId!=''">
+            and provId =#{proveid}
+        </if>
+        <if test="deviceVo.idcName!=null">
+            and idcName like #%{idcName}%
+        </if>
+        ORDER BY recordTime desc
+    </select>
+
+    <!--查询出cuInter-->
+    <select id="findCU" resultMap="">
+        select cuIP  from cu_du_yhsj2017 where process_stat='1'
+    </select>
+
+
+    <select id="" resultMap="">
+        <if test="devceType ==1">
+
+        </if>
+        if (1 == devceType) {
+        String tableName = SqlUtil.queryTableIndex(uuid, CommonContant.CU_STAT_TYPE);
+        sql = new StringBuffer("select status,idcID, count(DISTINCT cuIP) as dviceNum from ")
+        .append(tableName).append(" where uuid = ? GROUP BY status");
+        } else if (2 == devceType) {
+        String tableName = SqlUtil.queryTableIndex(uuid, CommonContant.EU_STAT_TYPE);
+        sql = new StringBuffer("select status,idcID, count(DISTINCT euID) as dviceNum from ")
+        .append(tableName).append(" where uuid = ? GROUP BY status");
+        }
+    </select>
+
+
 </mapper>
