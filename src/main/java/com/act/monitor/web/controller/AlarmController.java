@@ -1,7 +1,7 @@
 package com.act.monitor.web.controller;
 
 import com.act.monitor.common.mapper.ExceptionTableMapper;
-import com.act.monitor.common.model.ExceptionTable;
+import com.act.monitor.common.entity.ExceptionTable;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.slf4j.Logger;

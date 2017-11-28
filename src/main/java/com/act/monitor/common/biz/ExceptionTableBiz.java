@@ -1,22 +1,19 @@
 package com.act.monitor.common.biz;
 
-import com.act.monitor.common.mapper.ExceptionTableMapper;
-import com.act.monitor.common.model.ExceptionTable;
 import com.act.monitor.common.utils.BaseBiz;
-import com.act.monitor.web.vo.AlarmVo;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
+import com.act.monitor.common.entity.ExceptionTable;
+import com.act.monitor.common.mapper.ExceptionTableMapper;
+
 
 /**
- * ExceptionTableBiz
- * Description:
- * author: Administrator
- * 2017/11/26 0026
+ * 
+ *
+ * @author Mr.AG
+ * @email 463540703@qq.com
+ * @date 2017-11-28 15:06:42
  */
 @Service
-@Transactional(rollbackFor = Exception.class)
-public class ExceptionTableBiz  extends BaseBiz<ExceptionTableMapper,ExceptionTable>{
-
+public class ExceptionTableBiz extends BaseBiz<ExceptionTableMapper,ExceptionTable> {
 }

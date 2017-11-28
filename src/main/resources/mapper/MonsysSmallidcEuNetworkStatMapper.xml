@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.act.monitor.common.mapper.MonsysSmallidcEuNetworkStatMapper">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.act.monitor.common.entity.MonsysSmallidcEuNetworkStat" id="monsysSmallidcEuNetworkStatMap">
+        <result property="uuid" column="UUID"/>
+        <result property="houseid" column="houseID"/>
+        <result property="euid" column="euID"/>
+        <result property="idcid" column="idcID"/>
+        <result property="mac" column="mac"/>
+        <result property="cardname" column="cardName"/>
+        <result property="cardfunction" column="cardFunction"/>
+        <result property="cardeptype" column="cardepType"/>
+        <result property="cardtype" column="cardType"/>
+        <result property="transmissionspeed" column="transmissionSpeed"/>
+        <result property="pps" column="pps"/>
+        <result property="bps" column="bps"/>
+        <result property="plp" column="PLP"/>
+        <result property="connstatus" column="connStatus"/>
+        <result property="hybridmodel" column="hybridModel"/>
+        <result property="netcardinfo" column="netCardInfo"/>
+        <result property="innerip" column="innerIp"/>
+        <result property="version" column="version"/>
+        <result property="reserve0" column="reserve0"/>
+        <result property="reserve1" column="reserve1"/>
+        <result property="status" column="status"/>
+        <result property="recordtime" column="recordTime"/>
+    </resultMap>
+
+</mapper>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.act.monitor.common.mapper.MonsysSmallidcEuRuninfoStatMapper">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.act.monitor.common.entity.MonsysSmallidcEuRuninfoStat" id="monsysSmallidcEuRuninfoStatMap">
+        <result property="uuid" column="UUID"/>
+        <result property="houseid" column="houseID"/>
+        <result property="euid" column="euID"/>
+        <result property="8080occupation" column="8080occupation"/>
+        <result property="actlogNum" column="actlog_num"/>
+        <result property="monitorlogUploadnum" column="monitorLog_uploadNum"/>
+        <result property="blocklogUploadnum" column="blockLog_uploadNum"/>
+        <result property="statlogUploadnum" column="statLog_uploadNum"/>
+        <result property="reslogUploadnum" column="resLog_uploadNum"/>
+        <result property="actlogUploadnum" column="actLog_uploadNum"/>
+        <result property="starttime" column="startTime"/>
+        <result property="endtime" column="endTime"/>
+        <result property="reserve0" column="reserve0"/>
+        <result property="reserve1" column="reserve1"/>
+        <result property="status" column="status"/>
+        <result property="recordtime" column="recordTime"/>
+    </resultMap>
+
+</mapper>

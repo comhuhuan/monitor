@@ -79,17 +79,13 @@ public class BaseController extends MultiActionController {
     }
 
     /**
-     *
-     * @Description: 导入excle模板下载
-     * @param request
-     *            获取系统路径
-     * @param downFilePath
-     *            文件下载路径
-     * @param downFileName
-     *            文件下载名
-     * @param @throws IOException 设定文件
+     * @param request      获取系统路径
+     * @param downFilePath 文件下载路径
+     * @param downFileName 文件下载名
+     * @param @throws      IOException 设定文件
      * @return ResponseEntity<byte[]> 返回类型
      * @throws
+     * @Description: 导入excle模板下载
      */
     protected ResponseEntity<byte[]> download(HttpServletRequest request,
                                               String downFilePath, String downFileName) throws IOException {
@@ -116,12 +112,9 @@ public class BaseController extends MultiActionController {
     }
 
     /**
-     *
+     * @param dataList            数据列表
+     * @param dataHeaderStrRepost 表头
      * @Description: 根据 规定格式的表头 和数据 返回导出数据
-     * @param dataList
-     *            数据列表
-     * @param dataHeaderStrRepost
-     *            表头
      */
     protected <T> List<Object[]> initExport(List<T> dataList,
                                             String dataHeaderStrRepost) {

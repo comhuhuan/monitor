@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.act.monitor.common.mapper.UnitSystemVersionMapper">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.act.monitor.common.entity.UnitSystemVersion" id="unitSystemVersionMap">
+        <result property="name" column="name"/>
+        <result property="packetType" column="packet_type"/>
+        <result property="systemVersion" column="system_version"/>
+        <result property="svnVersion" column="svn_version"/>
+        <result property="desc" column="desc"/>
+        <result property="timestamp" column="timestamp"/>
+    </resultMap>
+
+</mapper>

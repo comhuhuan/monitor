@@ -1,16 +1,17 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.act.monitor.common.mapper.TabSysmanageinfoMapper" >
-  <resultMap id="BaseResultMap" type="com.act.monitor.common.model.TabSysmanageinfo" >
-    <!--
-      WARNING - @mbg.generated
-    -->
-    <id column="syamanage_id" property="syamanageId" jdbcType="TINYINT" />
-    <result column="sysmanage_name" property="sysmanageName" jdbcType="VARCHAR" />
-    <result column="picname" property="picname" jdbcType="VARCHAR" />
-    <result column="pathurl" property="pathurl" jdbcType="VARCHAR" />
-    <result column="opentype" property="opentype" jdbcType="CHAR" />
-    <result column="show_mk" property="showMk" jdbcType="CHAR" />
-    <result column="child_system_path" property="childSystemPath" jdbcType="VARCHAR" />
-  </resultMap>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.act.monitor.common.mapper.TabSysmanageinfoMapper">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.act.monitor.common.entity.TabSysmanageinfo" id="tabSysmanageinfoMap">
+        <result property="syamanageId" column="syamanage_id"/>
+        <result property="sysmanageName" column="sysmanage_name"/>
+        <result property="picname" column="picname"/>
+        <result property="pathurl" column="pathurl"/>
+        <result property="opentype" column="opentype"/>
+        <result property="showMk" column="show_mk"/>
+        <result property="childSystemPath" column="child_system_path"/>
+    </resultMap>
+
 </mapper>

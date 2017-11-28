@@ -1,17 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.act.monitor.common.mapper.MonsysAllTabnameInfoMapper" >
-  <resultMap id="BaseResultMap" type="com.act.monitor.common.model.MonsysAllTabnameInfo" >
-    <!--
-      WARNING - @mbg.generated
-    -->
-    <id column="UUID" property="uuid" jdbcType="VARCHAR" />
-    <id column="tableName" property="tablename" jdbcType="VARCHAR" />
-    <result column="idcID" property="idcid" jdbcType="VARCHAR" />
-    <result column="idcName" property="idcname" jdbcType="VARCHAR" />
-    <result column="provId" property="provid" jdbcType="INTEGER" />
-    <result column="provName" property="provname" jdbcType="VARCHAR" />
-    <result column="tableType" property="tabletype" jdbcType="INTEGER" />
-    <result column="recordTime" property="recordtime" jdbcType="TIMESTAMP" />
-  </resultMap>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.act.monitor.common.mapper.MonsysAllTabnameInfoMapper">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.act.monitor.common.entity.MonsysAllTabnameInfo" id="monsysAllTabnameInfoMap">
+        <result property="uuid" column="UUID"/>
+        <result property="idcid" column="idcID"/>
+        <result property="idcname" column="idcName"/>
+        <result property="provid" column="provId"/>
+        <result property="provname" column="provName"/>
+        <result property="tablename" column="tableName"/>
+        <result property="tabletype" column="tableType"/>
+        <result property="recordtime" column="recordTime"/>
+    </resultMap>
+
 </mapper>

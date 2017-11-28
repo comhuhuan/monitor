@@ -1,16 +1,17 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.act.monitor.common.mapper.TabPurviewMapper" >
-  <resultMap id="BaseResultMap" type="com.act.monitor.common.model.TabPurview" >
-    <!--
-      WARNING - @mbg.generated
-    -->
-    <id column="id" property="id" jdbcType="INTEGER" />
-    <result column="role_id" property="roleId" jdbcType="INTEGER" />
-    <result column="program_id" property="programId" jdbcType="VARCHAR" />
-    <result column="sec_menu_id" property="secMenuId" jdbcType="INTEGER" />
-    <result column="purview_list" property="purviewList" jdbcType="VARCHAR" />
-    <result column="purview_str" property="purviewStr" jdbcType="CHAR" />
-    <result column="is_usb_verify" property="isUsbVerify" jdbcType="CHAR" />
-  </resultMap>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.act.monitor.common.mapper.TabPurviewMapper">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.act.monitor.common.entity.TabPurview" id="tabPurviewMap">
+        <result property="id" column="id"/>
+        <result property="roleId" column="role_id"/>
+        <result property="programId" column="program_id"/>
+        <result property="secMenuId" column="sec_menu_id"/>
+        <result property="purviewList" column="purview_list"/>
+        <result property="purviewStr" column="purview_str"/>
+        <result property="isUsbVerify" column="is_usb_verify"/>
+    </resultMap>
+
 </mapper>

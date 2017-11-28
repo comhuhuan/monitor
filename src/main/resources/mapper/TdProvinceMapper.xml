@@ -1,14 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.act.monitor.common.mapper.TdProvinceMapper" >
-  <resultMap id="BaseResultMap" type="com.act.monitor.common.model.TdProvince" >
-    <!--
-      WARNING - @mbg.generated
-    -->
-    <id column="PROV_ID" property="provId" jdbcType="BIGINT" />
-    <result column="PROV_NAME" property="provName" jdbcType="VARCHAR" />
-    <result column="PROV_CODE" property="provCode" jdbcType="VARCHAR" />
-    <result column="PROV_ACTIVE" property="provActive" jdbcType="INTEGER" />
-    <result column="PROV_NOTE" property="provNote" jdbcType="VARCHAR" />
-  </resultMap>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.act.monitor.common.mapper.TdProvinceMapper">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.act.monitor.common.entity.TdProvince" id="tdProvinceMap">
+        <result property="provId" column="PROV_ID"/>
+        <result property="provName" column="PROV_NAME"/>
+        <result property="provCode" column="PROV_CODE"/>
+        <result property="provActive" column="PROV_ACTIVE"/>
+        <result property="provNote" column="PROV_NOTE"/>
+    </resultMap>
+
 </mapper>

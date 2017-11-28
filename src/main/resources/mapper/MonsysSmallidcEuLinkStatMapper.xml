@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.act.monitor.common.mapper.MonsysSmallidcEuLinkStatMapper">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.act.monitor.common.entity.MonsysSmallidcEuLinkStat" id="monsysSmallidcEuLinkStatMap">
+        <result property="uuid" column="UUID"/>
+        <result property="houseid" column="houseID"/>
+        <result property="euid" column="euID"/>
+        <result property="idcid" column="idcID"/>
+        <result property="spottype" column="spotType"/>
+        <result property="spotip" column="spotIP"/>
+        <result property="abnormal" column="abnormal"/>
+        <result property="spotmsg" column="spotMsg"/>
+        <result property="linkid" column="linkID"/>
+        <result property="inflow" column="inflow"/>
+        <result property="outflow" column="outflow"/>
+        <result property="intflowtotal" column="intFlowTotal"/>
+        <result property="outflowtotal" column="outFlowTotal"/>
+        <result property="linktype" column="linkType"/>
+        <result property="linkstate" column="linkState"/>
+        <result property="linkmsg" column="linkMsg"/>
+        <result property="reserve0" column="reserve0"/>
+        <result property="reserve1" column="reserve1"/>
+        <result property="status" column="status"/>
+        <result property="recordtime" column="recordTime"/>
+    </resultMap>
+
+</mapper>

@@ -1,18 +1,18 @@
 package com.act.monitor.web.controller;
 
 import com.act.monitor.common.mapper.MonsysAllIdcInfoMapper;
-import com.act.monitor.common.model.MonsysAllHousenameInfo;
 import com.act.monitor.web.vo.DeviceCountVo;
+import com.act.monitor.web.vo.DeviceHistoryVo;
 import com.act.monitor.web.vo.DeviceInfoVo;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import com.xiaoleilu.hutool.db.PageResult;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import tk.mybatis.mapper.entity.Example;
 
 import java.util.List;
 
@@ -66,13 +66,6 @@ public class DeviceCountController extends BaseController {
     public Object pageList(Integer pageIndex, Integer pageSize, DeviceCountVo deviceVo) {
         List<DeviceCountVo> deviceCountVos;
         try {
-            String provId = deviceVo.getProvId();
-            Example example = new Example(MonsysAllHousenameInfo.class);
-            Example.Criteria criteria = example.createCriteria();
-            criteria.andEqualTo("provId",provId);
-            monsysAllIdcInfoMapper.selectByExample(example);
-
-
 
             deviceCountVos = monsysAllIdcInfoMapper.pageList(deviceVo);
             PageHelper.startPage(pageIndex, pageSize);

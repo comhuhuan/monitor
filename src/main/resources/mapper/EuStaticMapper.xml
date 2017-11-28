@@ -1,42 +1,43 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.act.monitor.common.mapper.EuStaticMapper" >
-  <resultMap id="BaseResultMap" type="com.act.monitor.common.model.EuStatic" >
-    <!--
-      WARNING - @mbg.generated
-    -->
-    <id column="UUID" property="uuid" jdbcType="VARCHAR" />
-    <id column="houseID" property="houseid" jdbcType="BIGINT" />
-    <id column="euID" property="euid" jdbcType="VARCHAR" />
-    <result column="euIP" property="euip" jdbcType="VARCHAR" />
-    <result column="idcID" property="idcid" jdbcType="VARCHAR" />
-    <result column="provID" property="provid" jdbcType="INTEGER" />
-    <result column="idcName" property="idcname" jdbcType="VARCHAR" />
-    <result column="eu_cu_comm_stat" property="euCuCommStat" jdbcType="INTEGER" />
-    <result column="eu_cu_comm_stat_his" property="euCuCommStatHis" jdbcType="INTEGER" />
-    <result column="device_stat" property="deviceStat" jdbcType="INTEGER" />
-    <result column="device_stat_his" property="deviceStatHis" jdbcType="INTEGER" />
-    <result column="process_stat" property="processStat" jdbcType="INTEGER" />
-    <result column="process_stat_his" property="processStatHis" jdbcType="INTEGER" />
-    <result column="cpurate_stat" property="cpurateStat" jdbcType="INTEGER" />
-    <result column="cpurate_stat_his" property="cpurateStatHis" jdbcType="INTEGER" />
-    <result column="disk_stat" property="diskStat" jdbcType="INTEGER" />
-    <result column="disk_stat_his" property="diskStatHis" jdbcType="INTEGER" />
-    <result column="memory_stat" property="memoryStat" jdbcType="INTEGER" />
-    <result column="memory_stat_his" property="memoryStatHis" jdbcType="INTEGER" />
-    <result column="runinfo_stat" property="runinfoStat" jdbcType="INTEGER" />
-    <result column="runinfo_stat_his" property="runinfoStatHis" jdbcType="INTEGER" />
-    <result column="eu_du_comm_stat" property="euDuCommStat" jdbcType="INTEGER" />
-    <result column="eu_du_comm_stat_his" property="euDuCommStatHis" jdbcType="INTEGER" />
-    <result column="link_stat" property="linkStat" jdbcType="INTEGER" />
-    <result column="link_stat_his" property="linkStatHis" jdbcType="INTEGER" />
-    <result column="network_stat" property="networkStat" jdbcType="INTEGER" />
-    <result column="network_stat_his" property="networkStatHis" jdbcType="INTEGER" />
-    <result column="reserve0" property="reserve0" jdbcType="VARCHAR" />
-    <result column="reserve1" property="reserve1" jdbcType="VARCHAR" />
-    <result column="partial_stat" property="partialStat" jdbcType="INTEGER" />
-    <result column="status" property="status" jdbcType="INTEGER" />
-    <result column="status_his" property="statusHis" jdbcType="INTEGER" />
-    <result column="recordTime" property="recordtime" jdbcType="TIMESTAMP" />
-  </resultMap>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.act.monitor.common.mapper.EuStaticMapper">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.act.monitor.common.entity.EuStatic" id="euStaticMap">
+        <result property="uuid" column="UUID"/>
+        <result property="houseid" column="houseID"/>
+        <result property="euid" column="euID"/>
+        <result property="euip" column="euIP"/>
+        <result property="idcid" column="idcID"/>
+        <result property="provid" column="provID"/>
+        <result property="idcname" column="idcName"/>
+        <result property="euCuCommStat" column="eu_cu_comm_stat"/>
+        <result property="euCuCommStatHis" column="eu_cu_comm_stat_his"/>
+        <result property="deviceStat" column="device_stat"/>
+        <result property="deviceStatHis" column="device_stat_his"/>
+        <result property="processStat" column="process_stat"/>
+        <result property="processStatHis" column="process_stat_his"/>
+        <result property="cpurateStat" column="cpurate_stat"/>
+        <result property="cpurateStatHis" column="cpurate_stat_his"/>
+        <result property="diskStat" column="disk_stat"/>
+        <result property="diskStatHis" column="disk_stat_his"/>
+        <result property="memoryStat" column="memory_stat"/>
+        <result property="memoryStatHis" column="memory_stat_his"/>
+        <result property="runinfoStat" column="runinfo_stat"/>
+        <result property="runinfoStatHis" column="runinfo_stat_his"/>
+        <result property="euDuCommStat" column="eu_du_comm_stat"/>
+        <result property="euDuCommStatHis" column="eu_du_comm_stat_his"/>
+        <result property="linkStat" column="link_stat"/>
+        <result property="linkStatHis" column="link_stat_his"/>
+        <result property="networkStat" column="network_stat"/>
+        <result property="networkStatHis" column="network_stat_his"/>
+        <result property="reserve0" column="reserve0"/>
+        <result property="reserve1" column="reserve1"/>
+        <result property="partialStat" column="partial_stat"/>
+        <result property="status" column="status"/>
+        <result property="statusHis" column="status_his"/>
+        <result property="recordtime" column="recordTime"/>
+    </resultMap>
+
 </mapper>

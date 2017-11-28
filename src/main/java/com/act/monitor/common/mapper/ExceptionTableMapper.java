@@ -1,12 +1,19 @@
 package com.act.monitor.common.mapper;
 
-import com.act.monitor.common.model.ExceptionTable;
-import com.act.monitor.common.utils.MyMapper;
-import com.act.monitor.web.vo.AlarmVo;
-import org.apache.ibatis.annotations.Param;
+import com.act.monitor.common.entity.ExceptionTable;
+import tk.mybatis.mapper.common.Mapper;
 
 import java.util.List;
 
-public interface ExceptionTableMapper extends MyMapper<ExceptionTable> {
-    List<ExceptionTable>  getPageList(@Param("valid") String valid,@Param("parentclass") String parentclass);
+/**
+ * 
+ * 
+ * @author Yomo
+ * @email 463540703@qq.com
+ * @date 2017-11-28 15:06:42
+ */
+
+public interface ExceptionTableMapper extends Mapper<ExceptionTable> {
+
+    List<ExceptionTable> getPageList(String valid, String parentclass);
 }

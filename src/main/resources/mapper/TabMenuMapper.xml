@@ -1,23 +1,24 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.act.monitor.common.mapper.TabMenuMapper" >
-  <resultMap id="BaseResultMap" type="com.act.monitor.common.model.TabMenu" >
-    <!--
-      WARNING - @mbg.generated
-    -->
-    <id column="menu_id" property="menuId" jdbcType="INTEGER" />
-    <result column="parent_id" property="parentId" jdbcType="INTEGER" />
-    <result column="menu_name_ch" property="menuNameCh" jdbcType="VARCHAR" />
-    <result column="menu_name_en" property="menuNameEn" jdbcType="VARCHAR" />
-    <result column="menu_name_big" property="menuNameBig" jdbcType="VARCHAR" />
-    <result column="menu_title_ch" property="menuTitleCh" jdbcType="VARCHAR" />
-    <result column="menu_title_en" property="menuTitleEn" jdbcType="VARCHAR" />
-    <result column="menu_title_big" property="menuTitleBig" jdbcType="VARCHAR" />
-    <result column="menu_image" property="menuImage" jdbcType="VARCHAR" />
-    <result column="menu_url" property="menuUrl" jdbcType="VARCHAR" />
-    <result column="menu_parameter" property="menuParameter" jdbcType="VARCHAR" />
-    <result column="show_seq" property="showSeq" jdbcType="INTEGER" />
-    <result column="op_type" property="opType" jdbcType="CHAR" />
-    <result column="verflag" property="verflag" jdbcType="VARCHAR" />
-  </resultMap>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.act.monitor.common.mapper.TabMenuMapper">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.act.monitor.common.entity.TabMenu" id="tabMenuMap">
+        <result property="menuId" column="menu_id"/>
+        <result property="parentId" column="parent_id"/>
+        <result property="menuNameCh" column="menu_name_ch"/>
+        <result property="menuNameEn" column="menu_name_en"/>
+        <result property="menuNameBig" column="menu_name_big"/>
+        <result property="menuTitleCh" column="menu_title_ch"/>
+        <result property="menuTitleEn" column="menu_title_en"/>
+        <result property="menuTitleBig" column="menu_title_big"/>
+        <result property="menuImage" column="menu_image"/>
+        <result property="menuUrl" column="menu_url"/>
+        <result property="menuParameter" column="menu_parameter"/>
+        <result property="showSeq" column="show_seq"/>
+        <result property="opType" column="op_type"/>
+        <result property="verflag" column="verflag"/>
+    </resultMap>
+
 </mapper>

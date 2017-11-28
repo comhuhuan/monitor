@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.act.monitor.common.mapper.MonsysSmallidcCuStatStaticMapper">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.act.monitor.common.entity.MonsysSmallidcCuStatStatic" id="monsysSmallidcCuStatStaticMap">
+        <result property="uuid" column="UUID"/>
+        <result property="cuip" column="cuIP"/>
+        <result property="cutype" column="cuType"/>
+        <result property="idcid" column="idcID"/>
+        <result property="provid" column="provID"/>
+        <result property="idcname" column="idcName"/>
+        <result property="deviceStat" column="device_stat"/>
+        <result property="deviceStatHis" column="device_stat_his"/>
+        <result property="processStat" column="process_stat"/>
+        <result property="processStatHis" column="process_stat_his"/>
+        <result property="cpurateStat" column="cpurate_stat"/>
+        <result property="cpurateStatHis" column="cpurate_stat_his"/>
+        <result property="memoryStat" column="memory_stat"/>
+        <result property="memoryStatHis" column="memory_stat_his"/>
+        <result property="runinfoStat" column="runinfo_stat"/>
+        <result property="runinfoStatHis" column="runinfo_stat_his"/>
+        <result property="cuSmmsCommStat" column="cu_smms_comm_stat"/>
+        <result property="cuSmmsCommStatHis" column="cu_smms_comm_stat_his"/>
+        <result property="diskStat" column="disk_stat"/>
+        <result property="diskStatHis" column="disk_stat_his"/>
+        <result property="cmdStat" column="cmd_stat"/>
+        <result property="cmdStatHis" column="cmd_stat_his"/>
+        <result property="cuDuCommStat" column="cu_du_comm_stat"/>
+        <result property="cuDuCommStatHis" column="cu_du_comm_stat_his"/>
+        <result property="reserve0" column="reserve0"/>
+        <result property="reserve1" column="reserve1"/>
+        <result property="status" column="status"/>
+        <result property="statusHis" column="status_his"/>
+        <result property="recordtime" column="recordTime"/>
+    </resultMap>
+
+</mapper>
